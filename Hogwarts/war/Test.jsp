@@ -6,15 +6,85 @@
 <%@ page import="com.google.appengine.api.users.UserServiceFactory" %>
 <%@ page import="com.hogwarts.Greeting" %>
 <%@ page import="com.hogwarts.PMF" %>
-
 <html>
-  <head>
-    <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
-  </head>
+	<head>
+		<title> Hogwarts </title>
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+		<style>
+			body {
+			}
 
-  <body>
+			body{
+				background-color:#CCCCCC;
+				height:100%;
+			}
+			.mainContainer{
+				background-color:#FFFFFF;
+				width: 800px;
+				height: 100%;
+				margin-left:auto;
+				margin-right: auto;
+			}
+			.header{
+								margin-left:auto;
+				background-color:#7D6585;
+				margin-right: auto;
+				width:800px;
+				height: 100px;
+			}
+			.menu{
+				display:inline-block;
+				font-size:15px;
+				margin: 45px 0 0 0;
+				padding: 0 20px 0 0;
+				font-family: Tahoma;
+			}
+			.menuContainer{
+				float:right;
+				margin: 0 10px 0 0;
+			}
+			.menu a:link {color: #F5EDF7; text-decoration: none;}
+			.menu a:active {color: #FFFFFF;text-decoration: none;}
+			.menu a:visited {color: #F5EDF7; text-decoration: none;}
+			.menu a:hover {color: #4E3C54; text-decoration: none; }
+			
+			.logo{
+				width:150px;
+				float:left;
+				margin:15px 0 0 15px;
+font-family: 'Tangerine', serif;
+				font-size: 75px;
+				color: #32113D;
 
-<%
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo">
+				Hogwarts
+			</div>
+			<div class="menuContainer">
+				<div class="menu">
+					<a href="#"> HOME </a>
+				</div>
+				<div class="menu">
+					<a href="#"> STUDENTS </a>
+				</div>
+				<div class="menu">
+					<a href="#"> ALUMNI </a>
+				</div>
+				<div class="menu">
+					<a href="#"> TEACHERS </a>
+				</div>
+				<div class="menu">
+					<a href="#"> PARENTS </a>
+				</div>
+			</div>
+		</div>	
+		<div class="mainContainer">
+			<%
     UserService userService = UserServiceFactory.getUserService();
     User user = userService.getCurrentUser();
     if (user != null) {
@@ -62,6 +132,8 @@ to include your name with greetings you post.</p>
       <div><textarea name="content" rows="3" cols="60"></textarea></div>
       <div><input type="submit" value="Post Greeting" /></div>
     </form>
-
-  </body>
+			
+		</div>
+	</body>
 </html>
+
