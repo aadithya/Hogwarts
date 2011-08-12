@@ -28,15 +28,17 @@
 			}
 			.banner{
 				width: 896px;
-				height: 200px;
-				background-color: red;
+				height: 150px;
+				background-color: #A6A23E;
+				//border: solid 1px #849972;
+				-webkit-box-shadow: 2px 2px 15px 1px #4F2F1D;
 			}
 			.image{
 				width:150px;	
 				height:140px;
 				margin: 5px;
 				float:left;
-				background-color: blue;
+				background-color: #D9D094;
 			}
 			.content{
 				width: 344px;
@@ -50,21 +52,40 @@
 				height:2px;
 				background-color:brown;
 			}
-			.article{
-				width: 504px;
-				clear:both;
-			}
+			
 			h4{
 				font-size:18px;
 				text-decoration:underline;
 				font-weight:normal;
 			}
+			h2{
+				font-size: 24px;
+				letter-spacing: 5px;
+				text-shadow: 1px 1px 2px #4F2F1D;
+			}
 			.date{
 				float:left;
 				width:104px;
+				height: 100%;
+				//border-right: solid 1px #849972;
+				margin: 0 -1px 0 0;
 			}
 
 			.event{
+				float:right;
+				width:240px;
+			}
+			
+			.article{
+				width: 504px;
+				height:160px;
+				clear:both;
+				-webkit-box-shadow: 2px 2px 5px 1px #4F2F1D;
+				//border-bottom: solid 1px #849972;
+				margin: 0 0 15px 0;
+			}
+			
+			.dayEvents{
 				float:right;
 				width:240px;
 			}
@@ -78,8 +99,7 @@
 			<h2>
 				NEWS
 			</h2>
-
-			<hr class="mainRule">
+			
 			<div class="article">
 				<div class="image">
 				</div>
@@ -186,29 +206,12 @@
 
 
 <div class="day">
+
 				<div class="date">
 					Aug 13th
 				</div>
-				<div class="event">
-					<div class="desc">
-						Lorem ipsum dolor sit amet
-					</div>
-					<div class="time">
-						7 PM	
-					</div>
-
-				</div>
-				<div class="event">
-					<div class="desc">
-						Lorem ipsum dolor sit amet
-					</div>
-					<div class="time">
-						7 PM	
-					</div>
-
-				</div>
-
-				<div class="event">
+				<div class="dayEvents">
+				<div >
 					<div class="desc">
 						Lorem ipsum dolor sit amet
 					</div>
@@ -218,6 +221,17 @@
 
 				</div>
 
+				<div >
+					<div class="desc">
+						Lorem ipsum dolor sit amet
+					</div>
+					<div class="time">
+						7 PM	
+					</div>
+
+				</div>
+				</div>
+				<div style="clear: both;"></div>
 			</div>
 
 
